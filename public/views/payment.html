@@ -1,0 +1,65 @@
+<div class="container">
+
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12 text-center">
+                <hr>
+                  <h2 class="intro-text text-center">
+                    <strong>Payment Details</strong>
+                </h2>
+                <hr>
+
+<table>
+  <tbody>
+  <tr>
+    <td>Booking ID :</td>
+    <td>{{book.bookingID}}</td>
+  </tr>
+<tr>
+    <td>City :</td>
+      <td>{{book.city}}</td>
+  </tr>
+  <tr>
+    <td>Movie :</td>
+    <td>{{book.movieName}}</td>
+  </tr>
+  <tr>
+    <td>Theatre :</td>
+    <td>{{book.theatre}}</td>
+  </tr>
+  <tr>
+    <td>Date of Booking :</td>
+    <td>{{book.date}}</td>
+  </tr>
+  <tr>
+    <td>Show Time :</td>
+    <td>{{book.time}}</td>
+  </tr>
+   <tr>
+    <td>No.Tickets :</td>
+    <td>{{book.tickets}}</td>
+  </tr>
+  <tr>
+   <td>Total Price :</td>
+   <td>{{book.totalPrice}}</td>
+ </tr>
+  <tr>
+   <td>Seat No :</td>
+   <td>{{book.seatselected}}</td>
+  </tr>
+
+<tr>  <button type="button"  ng-click ="alert(); home1(); " class="btn btn-success"  id="pay" >Pay!!!</button></tr>
+  </tbody>
+
+  </table>
+    <!-- <button type="button"   value="Guess"  ng-click ="bookedInfo(book.bookingID);" class="btn btn-primary" data-dismiss="modal" id="submit" >View Booked Tickets</button>
+    <div class="col-sm-4" ng-repeat = "book in booklist | filter: {'bookingID': '{{book.bookingID}}'}">
+      <label value="{{book.bookingID}}">{{book.bookingID}}</label>
+    <label value="{{book.seatselected}}">{{book.seatselected}}</label>
+    <label value="{{book.seatselected}}">{{book.movieName}}</label> -->
+  <br/>
+
+            </div>
+        </div>
+    </div>
+</div>

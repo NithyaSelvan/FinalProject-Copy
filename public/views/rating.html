@@ -1,0 +1,101 @@
+<script type= "text/javascript" >
+$(document).ready(function(){
+    $("#b1").click(function(){
+        $("#myModal").modal();
+        // var bmovie = document.getElementById("bm").value;
+        // document.getElementById("title").innerHTML = bmovie;
+
+    });
+
+});
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="box">
+          <div class="row">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">
+                    <strong>Select Your Movie</strong>
+                </h2>
+                <hr>
+            </div>
+            <div id ="b1">
+            <div class="col-sm-4" ng-repeat = "movies in movieObj">
+              <div id="ss" value="{{movies.Title}}"><b>{{movies.Title}}</b></div><br/>
+                <img  class="img-responsive img-border img-circle" src="{{movies.Poster}}" ng-click ="titleInfo(movies.Title);" alt="" style="height: 300px;" /><br/>
+                       
+                 <button id="t3" type="button" ng-click ="titleInfo(movies.Title);" class="btn btn-warning">Rating</button>
+              
+
+            </div>
+          </div>
+
+</div>
+</div>
+</div>
+</div>
+<!-- modal -->
+
+<div class="modal fade" id="myModal" data-backdrop="static" data-keyboard="false" role="dialog">
+<div class="modal-dialog modal-lg">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+  <center>   <h4 class="modal-title">Rating Details</h4></center><br/>
+  </div>
+  <center>
+<h4 id="mvtitle" ng-model="book.movieName"><b>{{ss}}</b></h4></center>
+    <div class="modal-body">
+      <!-- <div id="container"> -->
+<div class="col-md-6">
+      <table class="table">
+<tbody>
+  <tr>
+    <td>Enter Your Comments</td>
+    <td>
+    <textarea class="form-control" ng-model="rate.comments" placeholer="Comments" name="rating.comments">
+                                      </textarea>
+    </td>
+        </tr>
+<tr>
+  <td>Give Your Ratings</td>
+          <td>
+            <select id="rating" ng-model="rate.rating" required>
+              <option id="">2</option>
+              <option id="">3</option>
+              <option id="">4</option>
+              <option id="">5</option>
+            </select> <span class="glyphicon glyphicon-star"></span>
+          </td>
+        </tr>
+        <tr></tr>
+        </tbody>
+        </table>
+        </div>
+</div>
+    <div class="modal-footer">
+      <!-- <button type="button"   value="Guess"  ng-click ="blockSeat(book.seatselected)" class="btn btn-primary" data-dismiss="modal" id="submit" >Block Seat</button> -->
+<center>
+<button type="button"   value="Guess"  ng-click ="rateMovie();" class="btn btn-primary" data-dismiss="modal" id="submit" >Submit</button>
+
+      <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+      </center>
+<!-- blocked code -->
+      <!-- <button type="button"   value="Guess"  ng-click ="bookedInfo(book.bookingID);" class="btn btn-primary" data-dismiss="modal" id="submit" >View Booked Tickets</button>
+      <div class="col-sm-4" ng-repeat = "book in booklist | filter: {'bookingID': 'BID345'}">
+        <label value="{{book.bookingID}}">{{book.bookingID}}</label>
+      <label value="{{book.seatselected}}">{{book.seatselected}}</label>
+      <label value="{{book.seatselected}}">{{book.movieName}}</label>
+      <br/> -->
+</div>
+    </div>
+<!-- modal content -->
+
+</div>
+<!-- modal dialogue -->
+    </div>

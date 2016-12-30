@@ -1,0 +1,25 @@
+
+<!-- <div class= "container">
+<div class="col-xs-12 col-sm-6  col-md-7 col-lg-12 no-padding">Overall Rating:
+  <span class="fa fa-star-o" data-ng-repeat="number in [1,2,3,4,5] track by $index" data-ng-click="setStars($index)" data-ng-style="litStars($index)"></span>
+</div>
+<div ng-init="rating = star.rating + 1"></div>
+
+<div class="star-rating" star-rating rating-value="rating"
+
+ data-max="10" on-rating-selected="rateFunction(rating)"></div>
+<ng-rate-it ng-model = "model.minMaxStep" min="5" max="10" step ="2"></ng-rate-it>
+</div> -->
+
+<div  class="container">
+  <h1>Angular Star Rating Directive</h1>
+  <div star-rating ng-model="rating.rating1" max="10" on-rating-select="rating.rateFunction(rating)"></div>
+  <star-rating ng-model="rating.rating2" readonly="rating.isReadonly"></star-rating>
+  <label>
+    <input type="checkbox" ng-model="rating.isReadonly"/>
+    Is Readonly
+  </label>
+
+  <div><strong>Rating 1:</strong> {{rating.rating1}}</div>
+  <div><strong>Rating 2:</strong> {{rating.rating2}}</div>
+</div>
